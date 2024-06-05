@@ -36,3 +36,64 @@
     transform: rotate(360deg);
   }
 }
+
+.star-ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+/* Hiding the radio buttons behind the stars*/
+.radio-star-btn {
+  display: none;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: auto;
+  padding: 10px;
+  border: 3px double red;
+}
+
+.review-form label {
+  display: flex;
+  justify-content: left;
+  padding: 5px;
+  margin-right: 5px;
+  border: 3px solid green;
+}
+
+.review-form input {
+  margin-left: 10px;
+}
+
+#reviewBody {
+
+}
+
+.review-form h1 {
+  border: 3px solid red;
+}
+
+.review-list {
+  border: 3px dotted blue;
+}
+
+.review-data {
+  border: 3px groove lightpink;
+}
+
+.movie-data {
+  border: 3px groove cyan;
+}
+
+.movieList-data {
+  border: 3px solid greenyellow;
+}
