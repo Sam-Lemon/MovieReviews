@@ -35,15 +35,33 @@ export const ReviewForm = (props) => {
                 <h1 className="review-stars"><StarRating /></h1>
                 <label>
                     Name:
-                    <input value={name} onChange={(e) => setName(e.target.value)} type="name" placeholder="John Smith" id="name" name="name" />
+                    <input 
+                        value={name} 
+                        onChange={(e) => setName(e.target.value)} 
+                        type="name" 
+                        placeholder="John Smith" 
+                        id="name" 
+                        name="name" 
+                    />
                 </label>
                 <label>
                     Headline:
-                    <input value={headline} onChange={(e) => setHeadline(e.target.value)} type="headline" id="headline" name="headline" />
+                    <input value={headline} 
+                        onChange={(e) => setHeadline(e.target.value)} 
+                        type="headline" 
+                        id="headline" 
+                        name="headline" 
+                    />
                 </label>
                 <label>
                     Review:
-                    <input value={reviewBody} onChange={(e) => setReviewBody(e.target.value)} type="reviewBody" id="reviewBody" name="reviewBody" />
+                    <input 
+                        value={reviewBody} 
+                        onChange={(e) => setReviewBody(e.target.value)} 
+                        type="reviewBody" 
+                        id="reviewBody" 
+                        name="reviewBody" 
+                    />
                 </label>
                 <label> 
                     <button className="btn btn-primary">Submit</button>

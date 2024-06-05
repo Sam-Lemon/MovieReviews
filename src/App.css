@@ -54,6 +54,7 @@
 }
 
 .review-form {
+  /* background-image: url('https://cdn.wallpapersafari.com/1/16/QY5WwP.png'); */
   display: flex;
   flex-direction: column;
   max-width: 30rem;
@@ -67,7 +68,8 @@
   justify-content: left;
   padding: 5px;
   margin-right: 5px;
-  border: 3px solid green;
+  border: 3px solid yellow;
+  /* color: white; */
 }
 
 .review-form input {
