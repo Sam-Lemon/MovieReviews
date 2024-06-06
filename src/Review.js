@@ -1,5 +1,4 @@
 import React from "react";
-import ReviewForm from "./ReviewForm";
 
 
 
@@ -17,11 +16,10 @@ export default class Review extends React.Component {
         return (
            <div className="card w-75">
             <div className="card-header bg-success text-white">
-                <p>{this.props.userName}</p> 
-                <strong>{this.props.headline}</strong>
+                <p>{this.props.userName} <strong>{this.props.headline}</strong></p> 
             </div>
             <div className="card-body">
-                {this.props.content}
+                {this.props.reviewBody}
             </div>
            </div>
         );

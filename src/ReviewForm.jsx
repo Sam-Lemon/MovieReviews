@@ -17,16 +17,15 @@ import StarRating from "./StarRating";
 
 export const ReviewForm = (props) => {
 
-    const [name, setName] = useState(" ");
+    const [userName, setUserName] = useState(" ");
     const [headline, setHeadline] = useState(" ");
     const [reviewBody, setReviewBody] = useState(" ");
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, headline, reviewBody);
-        
-        }   
+        console.log(userName, headline, reviewBody);
+        }
 
     return (
         <div className="review-form-container">
@@ -34,10 +33,10 @@ export const ReviewForm = (props) => {
             <form className="review-form" onSubmit={handleSubmit}>
                 <h1 className="review-stars"><StarRating /></h1>
                 <label>
-                    Name:
+                    Username:
                     <input 
-                        value={name} 
-                        onChange={(e) => setName(e.target.value)} 
+                        value={userName} 
+                        onChange={(e) => setUserName(e.target.value)} 
                         type="name" 
                         placeholder="John Smith" 
                         id="name" 
