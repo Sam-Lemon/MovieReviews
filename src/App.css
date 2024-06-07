@@ -4,9 +4,13 @@
 
 /****************************************************************/
 .title-image {
-  background-color: #0A2E2E;
+  background-color: rgba(10, 46, 46, 0.8);
+  max-width: 80vw; 
   display: flex;
   justify-content: space-around;
+  margin: 2rem auto;
+  border: 5px ridge #e29506;
+  border-radius: 15px;
 }
 
 .movie-title {
@@ -48,44 +52,41 @@
 }
 
 /****************************************************************/
-/* .review-form {
+.review-form {
   background-color: #1f1e1e;
   border: 4px outset #e29506;
   border-radius: 5%;
   color: orange;
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
+  max-width: 20rem;
   margin: auto;
   padding: 10px;
 }
 
-
 .review-form label {
   display: flex;
+  justify-content: flex-start;
+}
+
+.input-fields {
+  display: flex;
   justify-content: left;
-  align-items: center;
-  padding: 5px;
-  margin-right: 5px;
 }
 
-.username-input {
-  margin-left: 10px;
+
+#headlineInput {
+  max-width: 60rem;
 }
 
-.headline-input {
-  margin-left: 18px;
+#reviewBodyInput {
+
 }
 
-.review-input {
-  margin-left: 30px;
-}
 
-#reviewBody {
-  background-color: white;
-} */
 
-.review-list {
+
+/* .review-list {
   border: 3px solid blue;
 }
 
@@ -95,4 +96,4 @@
 
 .movieList-data {
   border: 3px solid aquamarine;
-}
+} */

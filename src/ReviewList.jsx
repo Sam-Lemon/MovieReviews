@@ -26,9 +26,11 @@ export default class ReviewList extends React.Component {
             count: 0
         };
     }
+
     render() {
 
-        setTimeout(() => this.setState({content: 'state updated'}), 2000);
+
+        // setTimeout(() => this.setState({content: 'state updated'}), 2000);
 
 /** The reviews array hold any reviews currently held in this
  * state.*/
@@ -40,15 +42,11 @@ export default class ReviewList extends React.Component {
         }
 
        return(
-        <div className="card w-50">
-            <div id="review-list-title" className="card-header">
-                User Reviews
-            </div>
-            <div className="card-body">
-                {this.state.reviewBody}
-            </div>
-            <div className="card-footer">
-                {reviews}
+        <div>
+            <h2>Reviews</h2>
+            <div>{this.state.content}</div>
+            <div>
+                {reviews} 
             </div>
         </div>
        )

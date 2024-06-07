@@ -10,20 +10,19 @@ export default class MovieList extends React.Component {
     render() {
 
         let movies = [{
-            
                 title: "The Princess Bride",
                 synop: "A bedridden boy's grandfather reads him the story of a farm boy-turned-pirate who encounters numerous obstacles, enemies and allies in his quest to be reunited with his true love.",
-                image: "https://static.hollywoodreporter.com/sites/default/files/2013/11/princess_bride_poster_art_a_p.jpg",
+                image: "../images/ThePrincessBride.jpg",
                 reviews: [
                     {
                         username: 'Billy',
                         rating: 5,
-                        body: 'This movie is a classic!'
+                        body: 'Brilliant action flick with a love story, perfect for everybody.'
                     },
                     {
                         username: 'Jim',
                         rating: 4,
-                        body: 'I love the music in this movie.'
+                        body: 'Such a good movie, so many amazing lines, drama, intrigue, an all around great time.'
                     }
                 ]
             },
@@ -47,7 +46,7 @@ export default class MovieList extends React.Component {
             {
                 title: "Home Alone",
                 synop: "The McCallister family is planning on going to Paris for Christmas vacation and in their rush to leave, leave the youngest member of the family, Kevin, at home! While the family is gone, Kevin has to defend the home against a couple of bumbling burglars.",
-                image: "https://www.ruthlessreviews.com/wp-content/uploads/2020/12/home-alone-meta.jpeg",
+                image: "../images/HomeAlone.jpeg",
                 reviews: [
                     {
                         username: 'Jonathon',

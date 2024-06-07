@@ -15,7 +15,7 @@ import StarRating from "./StarRating";
 
 
 
-export default function ReviewForm () {
+function ReviewForm () {
 
     const [userName, setUserName] = useState(" ");
     const [reviewBody, setReviewBody] = useState(" ");
@@ -64,6 +64,8 @@ export default function ReviewForm () {
         </div>
     );
 }
+
+export default ReviewForm;
 
 
 

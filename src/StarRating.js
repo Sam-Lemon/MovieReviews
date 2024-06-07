@@ -22,11 +22,12 @@ const StarRating = () => {
  * behind the stars for all of this functionality. */
     return (
         <div className="star-ratings">
+            <p>Rate this movie</p>
             {[ ...Array(5)].map((star, i) => {
                 const ratingValue = i + 1;
 
                 return (
-                    <label>
+                    <div key={i}>
                         <input 
                             className="radio-star-btn" 
                             type="radio" 
@@ -41,7 +42,7 @@ const StarRating = () => {
                             onMouseEnter={() => setHover(ratingValue)}
                             onMouseLeave={() => setHover (null)}
                             />
-                    </label>
+                    </div>
                 );
             })}
         </div>

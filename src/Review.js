@@ -19,10 +19,10 @@ export default class Review extends React.Component {
         return (
            <div className="card w-75">
             <div className="card-header bg-success text-white">
-                <p><strong>{this.props.headline}</strong> {this.props.userName} </p> 
+                <p><strong>{this.props.username}</strong></p> 
             </div>
             <div className="card-body">
-                {this.props.reviewBody}
+                {this.props.body}
             </div>
            </div>
         );
