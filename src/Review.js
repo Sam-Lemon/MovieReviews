@@ -1,10 +1,13 @@
 import React from "react";
+import ReviewForm from "./ReviewForm";
 
 
 
 
-// form submits data to here, this compiles an array of comments,
+// form submits data to here, this turns it into a review,
 // then is pushed over to ReviewList
+
+//does these each need their own key value?
 
 
 
@@ -16,7 +19,7 @@ export default class Review extends React.Component {
         return (
            <div className="card w-75">
             <div className="card-header bg-success text-white">
-                <p>{this.props.userName} <strong>{this.props.headline}</strong></p> 
+                <p><strong>{this.props.headline}</strong> {this.props.userName} </p> 
             </div>
             <div className="card-body">
                 {this.props.reviewBody}
@@ -25,7 +28,6 @@ export default class Review extends React.Component {
         );
     }
 }
-
 
 
 

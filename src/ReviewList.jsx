@@ -1,7 +1,6 @@
 import React from "react";
 import Review from "./Review";
 
-
 //container inside of a movie that houses Review components
 
 
@@ -42,8 +41,8 @@ export default class ReviewList extends React.Component {
 
        return(
         <div className="card w-50">
-            <div  className="card-header bg-primary text-white">
-                Audience Reviews
+            <div id="review-list-title" className="card-header">
+                User Reviews
             </div>
             <div className="card-body">
                 {this.state.reviewBody}

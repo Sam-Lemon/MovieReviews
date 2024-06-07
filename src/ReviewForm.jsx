@@ -15,60 +15,58 @@ import StarRating from "./StarRating";
 
 
 
-export const ReviewForm = (props) => {
+export default function ReviewForm () {
 
     const [userName, setUserName] = useState(" ");
     const [headline, setHeadline] = useState(" ");
     const [reviewBody, setReviewBody] = useState(" ");
 
+    function handleUserNameChange(e) {
+        setUserName(e.target.value);
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(userName, headline, reviewBody);
-        }
+    function handleHeadlineChange(e) {
+        setHeadline(e.target.value);
+    }
+
+    function handleReviewBodyChange(e) {
+        setReviewBody(e.target.value);
+    }
+
+    function handleReset() {
+        setUserName('');
+        setHeadline('');
+        setReviewBody('');
+    }
+
 
     return (
-        <div className="review-form-container">
-            <h3 className="form-header">Write a Review</h3>
-            <form className="review-form" onSubmit={handleSubmit}>
+        <div>
+            <form onSubmit={e => e.preventDefault()}>
                 <h1 className="review-stars"><StarRating /></h1>
-                <label>
-                    Username:
-                    <input 
-                        value={userName} 
-                        onChange={(e) => setUserName(e.target.value)} 
-                        type="name" 
-                        placeholder="John Smith" 
-                        id="name" 
-                        name="name" 
-                    />
-                </label>
-                <label>
-                    Headline:
-                    <input value={headline} 
-                        onChange={(e) => setHeadline(e.target.value)} 
-                        type="headline" 
-                        id="headline" 
-                        name="headline" 
-                    />
-                </label>
-                <label>
-                    Review:
-                    <input 
-                        value={reviewBody} 
-                        onChange={(e) => setReviewBody(e.target.value)} 
-                        type="reviewBody" 
-                        id="reviewBody" 
-                        name="reviewBody" 
-                    />
-                </label>
-                <label> 
-                    <button className="btn btn-primary">Submit</button>
-                </label>
+                <input  
+                    placeholder="Username"
+                    value={userName}
+                    onChange={handleUserNameChange}
+                />
+                <input
+                    placeholder="Headline"
+                    value={headline}
+                    onChange={handleHeadlineChange}
+                />
+                <input
+                placeholder="Write your review here"
+                value={reviewBody}
+                onChange={handleReviewBodyChange}
+                />
+                <button onClick={handleReset}>Submit</button>
             </form>
+
+
         </div>
-    )
+    );
 }
+
 
 
 
