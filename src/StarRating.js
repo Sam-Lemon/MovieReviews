@@ -7,9 +7,9 @@ import { FaStar } from 'react-icons/fa';
  * hover effect on the stars I am using. I used setters, setRating and
  * setHover to set the state to null to begin with, because no rating
  * had been made yet.*/
-const StarRating = () => {
-    const [rating, setRating] = useState(null);
-    const [hover, setHover] = useState(null);
+function StarRating () {
+    const [rating, setRating] = useState("");
+    const [hover, setHover] = useState("");
 
 /** Created an array with the 5 stars, mapped over them and returned 
  * the react icon star. The parameter i, and the const ratingValue
@@ -20,7 +20,12 @@ const StarRating = () => {
  ** I imported a star icon from react-icons and made the color change when 
  * the user's mouse hovers over it. And I also hide some radio buttons
  * behind the stars for all of this functionality. */
-    return (
+
+ function handleStarChange(e) {
+    setRating(e.target.value);
+}
+ 
+ return (
         <div className="star-ratings">
             {[ ...Array(5)].map((star, i) => {
                 const ratingValue = i + 1;
@@ -28,11 +33,11 @@ const StarRating = () => {
                 return (
                     <div key={i}>
                         <input 
-                            className="radio-star-btn" 
                             type="radio" 
+                            className="radio-star-btn" 
                             name="rating" 
                             value={ratingValue} 
-                            onClick={() => setRating(ratingValue)} 
+                            onClick={() => handleStarChange} 
                         />
                         <FaStar 
                             className="star" 

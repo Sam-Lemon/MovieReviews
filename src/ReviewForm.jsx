@@ -1,38 +1,36 @@
 import React, { useState } from "react";
 import StarRating from "./StarRating";
+import ReviewList from "./ReviewList";
 
-
-
-// form at bottom of movie  component that allows users
-// to leave reviews. When submitted, the review should
-// be added to the movie.
-
-
-// I want Customer Reviews centered, Write a Review on the left,
-// big text box aligned on left, submit button below text box on right.
-// **On submit, ReviewForm gets pushed to Review**
-
-
-
+/** Below is the component for the review form. I set my state 
+ * here at the top, and created a few function to handle the 
+ * user's inputs by using the setter function to update the 
+ * state of the review.*/
 
 function ReviewForm () {
 
     const [userName, setUserName] = useState(" ");
-    const [reviewBody, setReviewBody] = useState(" ");
+    const [body, setBody] = useState(" ");
 
     function handleUserNameChange(e) {
         setUserName(e.target.value);
     }
 
-    function handleReviewBodyChange(e) {
-        setReviewBody(e.target.value);
+    function handleBodyChange(e) {
+        setBody(e.target.value);
     }
 
     function handleReset() {
+        {ReviewList.reviews.push(userName, body)};
         setUserName('');
-        setReviewBody('');
+        setBody('');
     }
 
+
+/** Below is the rendering of the form. There's a header, the StarRating
+ * component that was imported at the top, a username label and input, a 
+ * (review) body label and input, and a submit button. For some reason none
+ * of this works and I'm not sure why.*/
 
     return (
         <div className="review-form">
@@ -52,9 +50,9 @@ function ReviewForm () {
                         <label className="form-reviewBodyLabel">Write your review here:</label>
                         <input
                         className="input-fields"
-                        id="reviewBodyInput"
-                        value={reviewBody}
-                        onChange={handleReviewBodyChange}
+                        id="bodyInput"
+                        value={body}
+                        onChange={handleBodyChange}
                         />
                     </div>
                 </div>

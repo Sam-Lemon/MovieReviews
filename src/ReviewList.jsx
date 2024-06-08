@@ -40,7 +40,6 @@ export default class ReviewList extends React.Component {
 
        return(
         <div className="review-list">
-            <h2 className="review-header">Reviews</h2>
             <div className="user-reviews">{this.state.content}</div>
             <div>
                 {reviews} 

@@ -1,12 +1,13 @@
+/** This file is essentially the format of the Movie section of the page.
+ * It includes all of the different components and elements needed for the page,
+ * the title, synopsis, image, the ReviewForm component, and the ReviewsList component. 
+ * I used JavaScript to pass props into the different locations using {this.props.property}.
+ * As per usual, all of the important files are imported at the top. */
+
+
 import React from "react";
 import ReviewForm from "./ReviewForm";
 import ReviewList from "./ReviewList";
-// import ReviewList from "ReviewList";
-// import Stars from "Stars";
-// import MovieList from "./MovieList";
-
-
-//component that represents movie data (i.e. image, synopsis, rating, etc)
 
 export default class Movie extends React.Component {
     render() {

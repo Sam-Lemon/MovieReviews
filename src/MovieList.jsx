@@ -1,14 +1,13 @@
+
+
 import React from "react";
 import Movie from "./Movie";
-
-
-//container for all the Movie components and their data.
-
 
 export default class MovieList extends React.Component {
        
     render() {
 
+/** This is a movie array with all of the movie objects, and their reviews.*/
         let movies = [{
                 title: "The Princess Bride",
                 synop: "A bedridden boy's grandfather reads him the story of a farm boy-turned-pirate who encounters numerous obstacles, enemies and allies in his quest to be reunited with his true love.",
@@ -62,6 +61,7 @@ export default class MovieList extends React.Component {
             }
         ];
 
+/** Here I have my class render map through the array of movies and return all of the properties of each.*/
         return (
             <div className="movieList-data">
                {movies.map((movie, index) => {

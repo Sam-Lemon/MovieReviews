@@ -1,16 +1,7 @@
 import React from "react";
 
-
-
-
-// form submits data to here, this turns it into a review,
-// then is pushed over to ReviewList
-
-//does these each need their own key value?
-
-
-
-//COMMENT!
+/** This is the review that is created by the review from by 
+ * passing props username and body.*/
 
 export default class Review extends React.Component {
    
