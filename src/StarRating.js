@@ -22,7 +22,6 @@ const StarRating = () => {
  * behind the stars for all of this functionality. */
     return (
         <div className="star-ratings">
-            <p>Rate this movie</p>
             {[ ...Array(5)].map((star, i) => {
                 const ratingValue = i + 1;
 

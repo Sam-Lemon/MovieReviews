@@ -37,18 +37,19 @@ function ReviewForm () {
     return (
         <div className="review-form">
             <form onSubmit={e => e.preventDefault()}>
+                <p className="rating-header">Rate this movie</p>
                 <h1 className="review-stars"><StarRating /></h1>
                 <div>
-                    <div>
-                        <label className="form-usernameLabel">Username</label>
+                    <div className="form-username">
+                        <label className="form-usernameLabel">Username:</label>
                         <input 
                             className="input-fields" 
                             value={userName}
                             onChange={handleUserNameChange}
                         />
                     </div>
-                    <div>
-                        <label className="form-reviewBodyLabel">Write your review here</label>
+                    <div className="form-content">
+                        <label className="form-reviewBodyLabel">Write your review here:</label>
                         <input
                         className="input-fields"
                         id="reviewBodyInput"
@@ -57,7 +58,10 @@ function ReviewForm () {
                         />
                     </div>
                 </div>
-                <button onClick={handleReset}>Submit</button>
+                <div className="btn-container">
+                    <button className="submit-btn" onClick={handleReset}>Submit</button>
+
+                </div>
             </form>
 
 

@@ -29,9 +29,6 @@ export default class ReviewList extends React.Component {
 
     render() {
 
-
-        // setTimeout(() => this.setState({content: 'state updated'}), 2000);
-
 /** The reviews array hold any reviews currently held in this
  * state.*/
         let reviews = [];
@@ -42,9 +39,9 @@ export default class ReviewList extends React.Component {
         }
 
        return(
-        <div>
-            <h2>Reviews</h2>
-            <div>{this.state.content}</div>
+        <div className="review-list">
+            <h2 className="review-header">Reviews</h2>
+            <div className="user-reviews">{this.state.content}</div>
             <div>
                 {reviews} 
             </div>
