@@ -139,7 +139,6 @@
 .review-list {
   display: flex;
   flex-direction: column;
-  /* border: .5rem solid #01667A; */
   margin: 1rem;
 }
 

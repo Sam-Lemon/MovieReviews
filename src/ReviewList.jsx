@@ -1,21 +1,7 @@
 import React from "react";
 import Review from "./Review";
 
-//container inside of a movie that houses Review components
 
-
-// This will format the container for the ReviewForm and Reviews. 
-// I want to format the this file to have ReviewForm on top, and a
-// list of reviews in a column below. Then this component will go
-// over into the MovieList (I believe).
-
-// export default class MovieList extends React.Component {
-
-    
-// }
-
-
-//POST!
 
 export default class ReviewList extends React.Component {
     constructor(props) {

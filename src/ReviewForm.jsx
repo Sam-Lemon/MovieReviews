@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import StarRating from "./StarRating";
-import ReviewList from "./ReviewList";
 
 /** Below is the component for the review form. I set my state 
  * here at the top, and created a few function to handle the 
@@ -21,7 +20,6 @@ function ReviewForm () {
     }
 
     function handleReset() {
-        {ReviewList.reviews.push(userName, body)};
         setUserName('');
         setBody('');
     }
